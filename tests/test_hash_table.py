@@ -1,8 +1,10 @@
 import pytest
+import sys 
 
-from ..app import hashtable as hashtable
+sys.path.append('..')
+from app.hash_table import HashTable
 
-test_hashtable = hashtable.HashTable()
+test_hashtable = HashTable()
 
 def test_add():
     """
