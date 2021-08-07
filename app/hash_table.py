@@ -18,5 +18,5 @@ class HashTable:
         """
         Returns the value given a key from the hash table
         """
-        return self.hash_table.get(key)
+        return self.hash_table.get(key, None)
     

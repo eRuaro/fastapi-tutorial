@@ -16,7 +16,7 @@ async def add_entry(key: str, value):
 @app.delete("/delete/{key}")
 async def delete_entry(key: str):
     hash_table.delete(key)
-    return f"Key: {key}deleted"
+    return f"Key: {key} deleted"
 
 @app.get("/get/{key}")
 async def get_value(key: str):
