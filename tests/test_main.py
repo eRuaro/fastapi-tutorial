@@ -8,3 +8,10 @@ def test_read_main():
     response = client.get("/")
     assert response.status_code == 200
     assert response.json() ==  {"Greetings": "Welcome to FastAPI!"}
+
+def test_post_method_add():
+    key = "FastAPI"
+    value = "tutorial"
+    response = client.post(f"/add/{key}-{value}")
+    assert response.status_code == 200
+    assert response.json() == f"Key-value pair {key}-{value} added"
