@@ -29,3 +29,10 @@ def test_get_method_get2():
     response = client.get(f"/get/{key}")
     assert response.status_code == 200
     assert response.json() == expected_value
+
+def test_delete_method_delete():
+    key = "FastAPI"
+    expected_value = f"Key: {key} deleted"
+    response = client.delete(f"/delete/{key}")
+    assert response.status_code == 200
+    assert response.json() == expected_value
