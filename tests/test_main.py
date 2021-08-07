@@ -22,3 +22,10 @@ def test_get_method_get():
     response = client.get(f"/get/{key}")
     assert response.status_code == 200
     assert response.json() == expected_value
+
+def test_get_method_get2():
+    key = "Flask"
+    expected_value = None
+    response = client.get(f"/get/{key}")
+    assert response.status_code == 200
+    assert response.json() == expected_value
